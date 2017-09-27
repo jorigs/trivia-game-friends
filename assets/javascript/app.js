@@ -119,6 +119,7 @@
     }
   }
 
+
   function showNextSlide() {
     showSlide(currentSlide + 1);
   }
@@ -127,16 +128,26 @@
     showSlide(currentSlide - 1);
   }
 
-  const quizContainer = document.getElementById("quiz");
-  const resultsContainer = document.getElementById("results");
-  const submitButton = document.getElementById("submit");
+  function resetGame() {
+  questionCounter = 0;
+  correctTally = 0;
+  incorrectTally = 0;
+  unansweredTally = 0;
+  counter = 30;
+  generateHTML();
+  timerWrapper();
+}
+
+  var quizContainer = document.getElementById("quiz");
+  var resultsContainer = document.getElementById("results");
+  var submitButton = document.getElementById("submit");
 
 
   buildQuiz();
 
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
-  const slides = document.querySelectorAll(".slide");
+  var previousButton = document.getElementById("previous");
+  var nextButton = document.getElementById("next");
+  var slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
   showSlide(0);
