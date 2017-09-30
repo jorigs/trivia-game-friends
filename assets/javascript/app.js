@@ -1,4 +1,27 @@
 
+setTimeout(startTimer);
+setTimeout(thirtySeconds, 1000 * 30);
+setTimeout(timeUp, 1000 * 60);
+
+function startTimer() {
+  $("#time-left").append("<h2>Start<br>You have 1 minute!</h2>")
+  console.log("Start Game");
+}
+
+function thirtySeconds() {
+
+  $("#time-left").append("<h2>About 30 Seconds Left</h2>");
+  console.log("30 Seconds Left");
+}
+
+function timeUp() {
+  $("#time-left").append("<h2>Time's Up!</h2>");
+  console.log("time is up");
+
+  // audio.play();
+}
+    
+
 (function() {
   const myQuestions = [
     {
