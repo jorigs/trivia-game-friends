@@ -47,13 +47,7 @@ $(document).ready(function() {
       picright: 'assets/images/rachel.jpg',
       picwrong: 'assets/images/18-important-life-lessons-phoebe-taught-on-us-on--2-27858-1441073280-0_dblbig.jpg',
       correctanswer: 3
-    }, {
-      question: "In what order do the characters appear in the opening credits?",
-      answers: ["Monica, Rachel, Phoebe, Chandler, Joey, Ross", "Rachel, Monica, Phoebe, Joey, Chandler, Ross", "Ross, Joey, Monica, Phoebe, Rachel, Chandler"],
-      picright: 'assets/images/ugly-naked-guy.gif',
-      picwrong: 'assets/images/18-important-life-lessons-phoebe-taught-on-us-on--2-27858-1441073280-0_dblbig.jpg',
-      correctanswer: 1
-    }, {
+    },  {
       question: "What did the duck eat that made him sick?",
       answers: ["Nutter Butter", "Soap", "An Engagement Ring", "Rachel's Face Cream"],
       picright: 'assets/images/b689c3ac6e670f87a0aa3adc55acf5c00391517a.jpg',
