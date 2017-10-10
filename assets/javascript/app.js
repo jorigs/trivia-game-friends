@@ -1,25 +1,57 @@
 
-setTimeout(startTimer);
-setTimeout(thirtySeconds, 1000 * 30);
-setTimeout(timeUp, 1000 * 60);
+// setTimeout(startTimer);
+// setTimeout(thirtySeconds, 1000 * 30);
+// setTimeout(timeUp, 1000 * 60);
 
-function startTimer() {
-  $("#time-left").append("<h2>Start<br>You have 1 minute!</h2>")
-  console.log("Start Game");
+// function startTimer() {
+//   $("#time-left").append("<h2>Start<br>You have 1 minute!</h2>")
+//   console.log("Start Game");
+// }
+
+// function thirtySeconds() {
+
+//   $("#time-left").append("<h2>About 30 Seconds Left</h2>");
+//   console.log("30 Seconds Left");
+// }
+
+// function timeUp() {
+//   $("#time-left").append("<h2>Time's Up!</h2>");
+//   console.log("time is up");
+
+//   // audio.play();
+// }
+
+var count = 60;
+
+var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count = count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  //Do code for showing the number of seconds here
+  function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+
+ $("#timer").html(count + " secs"); 
 }
 
-function thirtySeconds() {
-
-  $("#time-left").append("<h2>About 30 Seconds Left</h2>");
-  console.log("30 Seconds Left");
 }
 
-function timeUp() {
-  $("#time-left").append("<h2>Time's Up!</h2>");
-  console.log("time is up");
-
-  // audio.play();
-}
+timer();
+  console.log(timer);
     
 
 (function() {
@@ -165,9 +197,9 @@ function timeUp() {
   var resultsContainer = document.getElementById("results");
   var submitButton = document.getElementById("submit");
 
-
   buildQuiz();
 
+  // var startButton = document.getElementById("start");
   var previousButton = document.getElementById("previous");
   var nextButton = document.getElementById("next");
   var slides = document.querySelectorAll(".slide");
@@ -175,7 +207,7 @@ function timeUp() {
 
   showSlide(0);
 
-
+  // startButton.addEventListener("click", startGame);
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
